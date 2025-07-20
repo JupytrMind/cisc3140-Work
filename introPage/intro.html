@@ -5,66 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    table, th, td {
-  border:1px solid black;
-}
-</style>
+
 <body>      
     <header>
-        <h1>Welcome to Richard Jackson's Introduction Page</h1>
+        <h1 id="choiceA">Richard Jackson's Introduction Page</h1>
     </header>
     <main>
-        <section>
-            <h1>This is me!</h1>
+        
+            <h1 id="choiceB">This is me!</h1>
             <img src="/images/GOOGLETEC2024_Richard-Jackson_5675.jpg" alt="This is me" style="width:300px;height:400px;">
+            <div id="main-content">
+                <h2>About Me</h2>
+                <p>
+                    My name is Richard Jackson, and I am a Senior at Brooklyn College.
+                    I am currently studying Information Systems and have a keen interest in cybersecurity and system implementation.
+                    I am a member of various technology organizations such as Black Girls Hack, ISACA, and Professor Roger's Cyber Lounge.
+                    I am also a mentor with the Technology Leadership and Development Program at Barugh College.
+                    My interests include exploring new technologies, trying new resturants, watching anime, and enjoying nature.
+
+                </p>
+            </section>
+            <section>
+                <div>
+                    
+                        <h2>Interest Section</h2>
+                            <ul class="my-ul">
+                                <div class="contact-item">
+                                <li><a href="https://www.brooklyn.edu/" class="social-link">My College</a></li>
+                                </div>  
+                                <div class="contact-item">
+                                <li><a href="https://github.com/JupytrMind" class="social-link">Github</a></li>
+                                </div>
+                                <div class="contact-item">
+                                <li><a href="https://www.linkedin.com/in/richard-jackson-n1/" class="social-link">LinkedIn</a></li>
+                                </div>
+                            </ul>
+                    
+                            <div id="box-container">
+                                <div class="box">1</div>
+                                <div class="box">2</div>
+                                <div class="box">3</div>
+                                <div class="box">4</div>
+                                <div class="box">5</div>
+                                <div class="box">6</div>
+                            </div>
+                    <div class="section-block">
+                        <h3>List of places I like in New York!</h3>
+                            <ol class="my-ol">
+                                <li>Lucia Pizza of Ave X</li>
+                                <li>L&B's Spumoni</li>
+                                <li>Ainslee</li>
+                                <li>Brooklyn Bridge Park</li>
+                                <li>Prospect Park</li>
+                                <li>Fort Greene Park</li>
+                            </ol>
+                    </div>
+                </div>
+
+                <table class ="performance-table">
+                    <tr>
+                        <th>Educational</th>
+                        <th>Professional</th>
+                        <th>Personal</th>
+                    </tr>
+                    <tr>
+                        <td>Graduated with my Associates in CIS from Kingsborough CC.</td>
+                        <td>Completed a CTF event hosted by the Department of Defense.</td>
+                        <td>Became a Mentor to the next generation of technology professional.</td>
+                    </tr>
+                    <tr>
+                        <td>Nearing the completion of my second degree at Brooklyn College.</td>
+                        <td>Over 7 years of experience in the Educational space.</td>
+                        <td>I have the ability to drive nearly anything with wheels.</td>    
+
+                </table>
             
-            <h2>About Me</h2>
-            <p>My name is Richard Jackson, and I am a Senior at Brooklyn College.
-                I am currently studying Information Systems and have a keen interest in cybersecurity and system implementation.
-                I am a member of various technology organizations such as Black Girls Hack, ISACA, and Professor Roger's Cyber Lounge.
-                I am also a mentor with the Technology Leadership and Development Program at Barugh College.
-                My interests include exploring new technologies, trying new resturants, watching anime, and enjoying nature.
-
-                
-            </p>
-        </section>
-        <section>
-            <h2>Navigation</h2>
-            <ul>
-                <li><a href="https://www.brooklyn.edu/">My College</a></li>
-                <li><a href="https://github.com/JupytrMind">My Github</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Jamaica">My Home Country</a></li>
-            </ul>
-
-            <h3>List of places I like in New York!</h3>
-            <ol>
-                <li>Lucia Pizza of Ave X</li>
-                <li>L&B's Spumoni</li>
-                <li>Ainslee</li>
-                <li>Brooklyn Bridge Park</li>
-                <li>Prospect Park</li>
-                <li>Fort Greene Park</li>
-            </ol>
-
-            <table style="width:100%">
-                <tr>
-                    <th>Educational</th>
-                    <th>Professional</th>
-                    <th>Personal</th>
-                </tr>
-                <tr>
-                    <td>Graduated with my Associates in CIS from Kingsborough CC.</td>
-                    <td>Completed a CTF event hosted by the Department of Defense.</td>
-                    <td>Became a Mentor to the next generation of technology professional.</td>
-                </tr>
-                <tr>
-                    <td>Nearing the completion of my second degree at Brooklyn College.</td>
-                    <td>Over 7 years of experience in the Educational space.</td>
-                    <td>I have the ability to drive nearly anything with wheels.</td>    
-
-            </table>
-        </section>
+    </div>
     </main>
     
 </html>
