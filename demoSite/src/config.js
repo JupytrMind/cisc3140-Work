@@ -1,13 +1,17 @@
 const mongoose = require('mongoose');
-const connect = mongoose.connect("mongodb://127.0.0.1:27017/Munchies");
+mongoose.connect("mongodb://localhost:27017/Munchies-data");
 
 // Check database connected or not
-connect.then(() => {
+// connect.then(() => {
+//     console.log("Database Connected Successfully");
+// })
+// .catch(() => {
+//     console.log("Database cannot be Connected");
+// })
+mongoose.connection.once('open', () => {
     console.log("Database Connected Successfully");
-})
-.catch(() => {
-    console.log("Database cannot be Connected");
-})
+});
+mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // Create Schema
 // Next iteration will include separate schema for each data source (users, food types, and possibly restaurants)
@@ -28,10 +32,10 @@ const Loginschema = new mongoose.Schema({
 
 // collection part
 const Users = new mongoose.model("Users", Loginschema); // Changed collection name to "Users" for clarity
-const small = new Users({name: "small"}); // Create a sample document to test the connection
-async function save() {
-    await small.save(); // Save a sample document to test the connection
-}
+// const small = new Users({name: "small"}); // Create a sample document to test the connection
+// async function save() {
+//     await small.save(); // Save a sample document to test the connection
+// }
 
 // save() dd
 

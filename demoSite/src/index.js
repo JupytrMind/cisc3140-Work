@@ -13,6 +13,8 @@ app.use(express.urlencoded({ extended: false }));
 //use EJS as the view engine
 app.set("view engine", "ejs");
 
+app.set('views', path.join(__dirname, '..', 'views'));  // Points to the views directory for webpage to show
+
 app.get("/", (req, res) => {
     res.render("login");
 });
@@ -36,6 +38,7 @@ app.post("/signup", async (req, res) => {
     if (existingUser) {
         res.send('User already exists. Please choose a different username.');
     } else {
+        console.log(data); // Log the data to see what is being saved
         // Hash the password using bcrypt
         const saltRounds = 10; // Number of salt rounds for bcrypt
         const hashedPassword = await bcrypt.hash(data.password, saltRounds);
@@ -51,23 +54,30 @@ app.post("/signup", async (req, res) => {
 
 // Login user 
 app.post("/login", async (req, res) => {
-    try {
-        const check = await Users.findOne({ name: req.body.username });
-        if (!check) {
-            res.send("User name cannot found")
-        }
-        // Compare the hashed password from the database with the plaintext password
-        const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
-        if (!isPasswordMatch) {
-            res.send("wrong Password");
-        }
-        else {
-            res.render("home");
-        }
-    }
-    catch {
-        res.send("wrong Details");
-    }
+    console.log('Login route hit!');
+    res.send("Login successful!"); 
+    // When dashboard page is completed, -> res.redirect("/dashboard");
+    // try {
+    //     const check = await Users.findOne({ name: req.body.username });
+    //     if (!check) {
+    //         console.log("User name cannot found");
+    //         res.send("User name cannot found")
+    //     }
+    //     // Compare the hashed password from the database with the plaintext password
+    //     const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
+    //     if (!isPasswordMatch) {
+    //         console.log("wrong Password");
+    //         res.send("wrong Password");
+    //     }
+    //     else {
+    //         console.log("Login successful");
+    //         res.render("home");
+    //     }
+    // }
+    // catch {
+    //     console.log("wrong Details");
+    //     res.send("wrong Details");
+    // }
 });
 
 

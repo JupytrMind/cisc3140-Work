@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Webpage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../public/calculator.css" />
+
+</head>
+<body>
+    <div class="calculator-title-container">
+        <h1>
+            Calculator Webpage
+        </h1> 
+    </div>
+    <div id="calculator" class="flex flex-col items-center">
+        <!-- Display Area -->
+        <input type="text" id="display" class="mb-4 p-4 text-4xl text-right rounded-lg border-2 border-gray-300 w-full" readonly value="0">
+
+        <!-- Buttons Grid -->
+        <div class="buttons-grid">
+            <!-- Clear Button -->
+            <button class="button clear" data-action="clear">C</button>
+            <!-- Backspace Button -->
+            <!-- <button class="button backspace" data-action="backspace">←</button> -->
+            <!-- Operation Buttons -->
+            <button class="button operator" data-action="divide">/</button>
+            <button class="button operator" data-action="multiply">*</button>
+            <button class="button operator" data-action="subtract">-</button>
+
+            
+            <button class="button" data-value="7">7</button>
+            <button class="button" data-value="8">8</button>
+            <button class="button" data-value="9">9</button>
+            <button class="button operator" data-action="add">+</button>
+
+            <button class="button" data-value="4">4</button>
+            <button class="button" data-value="5">5</button>
+            <button class="button" data-value="6">6</button>
+
+            <button class="button" data-value="1">1</button>
+            <button class="button" data-value="2">2</button>
+            <button class="button" data-value="3">3</button>
+
+            
+            <button class="button" data-value="0">0</button>
+            <button class="button" data-value=".">.</button>
+
+            
+            <button class="button equals" data-action="equals">=</button>
+        </div>
+    </div>
+    <script src="../src/calculator.js"></script>
+</body>
+</html>
